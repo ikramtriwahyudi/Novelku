@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:novelku/color_palette/colorpalette.dart';
 import 'package:novelku/component/card.dart';
 import 'package:novelku/component/searching.dart';
@@ -43,14 +44,17 @@ class _HomeScreenState extends State<HomeScreen> {
                   children: [
                     Row(
                       children: [
-                        CardItem(
-                          image: Image.asset(
-                            "assets/1.jpeg",
-                            height: 205,
-                            width: 205,
-                            fit: BoxFit.cover,
+                        GestureDetector(
+                          onTap: () => context.goNamed('detail'),
+                          child: CardItem(
+                            image: Image.asset(
+                              "assets/1.jpeg",
+                              height: 205,
+                              width: 205,
+                              fit: BoxFit.cover,
+                            ),
+                            title: 'Rasa Dalam Aksara',
                           ),
-                          title: 'Rasa Dalam Aksara',
                         ),
                         const SizedBox(
                           width: 10,
@@ -63,87 +67,6 @@ class _HomeScreenState extends State<HomeScreen> {
                               fit: BoxFit.cover,
                             ),
                             title: 'Hilang Untuk Healing')
-                      ],
-                    ),
-                    const SizedBox(
-                      height: 20,
-                    ),
-                    Row(
-                      children: [
-                        CardItem(
-                          image: Image.asset(
-                            "assets/3.jpeg",
-                            height: 205,
-                            width: 205,
-                            fit: BoxFit.cover,
-                          ),
-                          title: 'Rumit',
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        CardItem(
-                            image: Image.asset(
-                              "assets/4.jpeg",
-                              height: 205,
-                              width: 205,
-                              fit: BoxFit.cover,
-                            ),
-                            title: 'Myself Or Yourself')
-                      ],
-                    ),
-                    const SizedBox(
-                      height: 20,
-                    ),
-                    Row(
-                      children: [
-                        CardItem(
-                          image: Image.asset(
-                            "assets/3.jpeg",
-                            height: 205,
-                            width: 205,
-                            fit: BoxFit.cover,
-                          ),
-                          title: 'Rumit',
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        CardItem(
-                            image: Image.asset(
-                              "assets/4.jpeg",
-                              height: 205,
-                              width: 205,
-                              fit: BoxFit.cover,
-                            ),
-                            title: 'Myself Or Yourself')
-                      ],
-                    ),
-                    const SizedBox(
-                      height: 20,
-                    ),
-                    Row(
-                      children: [
-                        CardItem(
-                          image: Image.asset(
-                            "assets/3.jpeg",
-                            height: 205,
-                            width: 205,
-                            fit: BoxFit.cover,
-                          ),
-                          title: 'Rumit',
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        CardItem(
-                            image: Image.asset(
-                              "assets/4.jpeg",
-                              height: 205,
-                              width: 205,
-                              fit: BoxFit.cover,
-                            ),
-                            title: 'Myself Or Yourself')
                       ],
                     ),
                     const SizedBox(

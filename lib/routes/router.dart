@@ -1,4 +1,5 @@
 import 'package:go_router/go_router.dart';
+import 'package:novelku/screen/detail.dart';
 import 'package:novelku/screen/home_screen.dart';
 import 'package:novelku/screen/splash_screen.dart';
 
@@ -18,25 +19,38 @@ class AppRoutes {
   static const splash = 'splash';
   // home
   static const home = 'home';
+  // detail
+  static const detail = 'detail';
+
+  static const root = 'root';
 }
 
 final routes = GoRouter(
   initialLocation: '/splash',
   routes: [
     GoRoute(
-      path: '/splash',
-      name: AppRoutes.splash,
+      path: '/',
       builder: (context, state) => const SplashScreen(),
+      name: AppRoutes.root,
+      routes: [
+        GoRoute(
+          path: 'splash',
+          name: AppRoutes.splash,
+          builder: (context, state) => const SplashScreen(),
+        ),
+        GoRoute(
+          path: 'home',
+          name: AppRoutes.home,
+          builder: (context, state) => const HomeScreen(),
+          routes: [
+            GoRoute(
+              path: 'detail',
+              name: AppRoutes.detail,
+              builder: (context, state) => const DetailScreen(),
+            ),
+          ],
+        ),
+      ],
     ),
-    GoRoute(
-      path: '/home',
-      name: AppRoutes.home,
-      builder: (context, state) => const HomeScreen(),
-    ),
-    // GoRoute(
-    //   path: '/main',
-    //   name: AppRoutes.main,
-    //   builder: (context, state) => const MainScreen(),
-    // ),
   ],
 );
