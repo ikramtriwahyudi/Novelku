@@ -2,7 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:novelku/color_palette/colorpalette.dart';
 
 class CardItem extends StatefulWidget {
-  const CardItem({super.key});
+  final Widget image;
+  final String title;
+
+  const CardItem({
+    super.key,
+    required this.image,
+    required this.title,
+  });
 
   @override
   State<CardItem> createState() => _CardItemState();
@@ -27,19 +34,15 @@ class _CardItemState extends State<CardItem> {
                 topLeft: Radius.circular(25),
                 topRight: Radius.circular(25),
               ),
-              child: Image.asset(
-                "assets/1.jpeg",
-                fit: BoxFit.cover,
-                height: 205,
-                width: 190,
-              ),
+              child: widget.image,
             ),
-            const ListTile(
+            ListTile(
               title: Center(
                 child: Text(
-                  "Rasa dan Aksara",
-                  style: TextStyle(
+                  widget.title,
+                  style: const TextStyle(
                       fontWeight: FontWeight.bold,
+                      fontSize: 14.5,
                       color: Colorpalette.secondaryColor),
                 ),
               ),

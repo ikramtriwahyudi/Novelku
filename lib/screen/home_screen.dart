@@ -42,14 +42,137 @@ class _HomeScreenState extends State<HomeScreen> {
                 Column(
                   children: [
                     Row(
-                      children: const [
-                        CardItem(),
-                        SizedBox(
+                      children: [
+                        CardItem(
+                          image: Image.asset(
+                            "assets/1.jpeg",
+                            height: 205,
+                            width: 205,
+                            fit: BoxFit.cover,
+                          ),
+                          title: 'Rasa Dalam Aksara',
+                        ),
+                        const SizedBox(
                           width: 10,
                         ),
-                        CardItem(),
+                        CardItem(
+                            image: Image.asset(
+                              "assets/2.jpeg",
+                              height: 205,
+                              width: 205,
+                              fit: BoxFit.cover,
+                            ),
+                            title: 'Hilang Untuk Healing')
                       ],
-                    )
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    Row(
+                      children: [
+                        CardItem(
+                          image: Image.asset(
+                            "assets/3.jpeg",
+                            height: 205,
+                            width: 205,
+                            fit: BoxFit.cover,
+                          ),
+                          title: 'Rumit',
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        CardItem(
+                            image: Image.asset(
+                              "assets/4.jpeg",
+                              height: 205,
+                              width: 205,
+                              fit: BoxFit.cover,
+                            ),
+                            title: 'Myself Or Yourself')
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    Row(
+                      children: [
+                        CardItem(
+                          image: Image.asset(
+                            "assets/3.jpeg",
+                            height: 205,
+                            width: 205,
+                            fit: BoxFit.cover,
+                          ),
+                          title: 'Rumit',
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        CardItem(
+                            image: Image.asset(
+                              "assets/4.jpeg",
+                              height: 205,
+                              width: 205,
+                              fit: BoxFit.cover,
+                            ),
+                            title: 'Myself Or Yourself')
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    Row(
+                      children: [
+                        CardItem(
+                          image: Image.asset(
+                            "assets/3.jpeg",
+                            height: 205,
+                            width: 205,
+                            fit: BoxFit.cover,
+                          ),
+                          title: 'Rumit',
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        CardItem(
+                            image: Image.asset(
+                              "assets/4.jpeg",
+                              height: 205,
+                              width: 205,
+                              fit: BoxFit.cover,
+                            ),
+                            title: 'Myself Or Yourself')
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    Row(
+                      children: [
+                        CardItem(
+                          image: Image.asset(
+                            "assets/3.jpeg",
+                            height: 205,
+                            width: 205,
+                            fit: BoxFit.cover,
+                          ),
+                          title: 'Rumit',
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        CardItem(
+                            image: Image.asset(
+                              "assets/4.jpeg",
+                              height: 205,
+                              width: 205,
+                              fit: BoxFit.cover,
+                            ),
+                            title: 'Myself Or Yourself')
+                      ],
+                    ),
                   ],
                 )
               ],
