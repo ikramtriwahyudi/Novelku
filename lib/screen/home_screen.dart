@@ -59,14 +59,17 @@ class _HomeScreenState extends State<HomeScreen> {
                         const SizedBox(
                           width: 10,
                         ),
-                        CardItem(
-                            image: Image.asset(
-                              "assets/2.jpeg",
-                              height: 205,
-                              width: 205,
-                              fit: BoxFit.cover,
-                            ),
-                            title: 'Hilang Untuk Healing')
+                        GestureDetector(
+                          onTap: () => context.goNamed('detail'),
+                          child: CardItem(
+                              image: Image.asset(
+                                "assets/2.jpeg",
+                                height: 205,
+                                width: 205,
+                                fit: BoxFit.cover,
+                              ),
+                              title: 'Hilang Untuk Healing'),
+                        )
                       ],
                     ),
                     const SizedBox(
