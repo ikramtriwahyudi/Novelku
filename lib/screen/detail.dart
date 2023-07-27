@@ -21,7 +21,7 @@ class _DetailScreenState extends State<DetailScreen> {
                 height: 320,
                 width: MediaQuery.of(context).size.width,
                 child: Image.asset(
-                  "assets/1.jpeg",
+                  "assets/4.jpeg",
                   fit: BoxFit.cover,
                 ),
               ),
